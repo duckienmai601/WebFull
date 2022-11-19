@@ -205,6 +205,16 @@ h2 {
     padding-top: 7px;
     margin-right: -10px;
 }
+.dropdown-menu .form {
+    padding-left: 7px;
+}
+.dropdown-menu h6 {
+    text-align: left;
+    padding: 5px 50px 10px 10px;
+    font-weight: bold;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+} 
 .category_top h2 {
     padding: 0;
 	font-size: 17px;
@@ -344,10 +354,6 @@ h2 {
 .news_info a:hover, .phone_num a:hover {
     color: #e97777;
 }
-
-
-
-
 
 
 .bold {
