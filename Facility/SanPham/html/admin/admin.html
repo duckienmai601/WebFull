@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/SanPham/fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="stylesheet" href="/SanPham/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="/SanPham/font_Roboto/Roboto-Bold.ttf">
+    <link rel="stylesheet" href="/SanPham/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/SanPham/css/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="tab_menu">
+                <i class="fas fa-bars" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 250px;">
+                    <div class="sidebar">
+                        <div class="close_tab">
+                            <i class="fas fa-xmark" data-bs-dismiss="offcanvas"></i>
+                        </div>
+                        <div class="user">
+                            <div class="user_avatar">
+                                <i class="fa-solid fa-user fa-2x"></i>
+                            </div>
+                            <div>
+                                <div class="user_name">
+                                    <b>Admin</b>
+                                </div>
+                                <div class="user_designation">
+                                    <p>Chào mừng bạn trở lại</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="menu">
+                            <a href="/SanPham/html/admin/admin.html"><li class="menu_item active"><i class="fas fa-house"></i>Trang chủ</li></a>
+                            <a href="/SanPham/html/admin/data_product.html"><li class="menu_item"><i class="fas fa-tag"></i>Quản lý sản phẩm</li></a>
+                            <a href="/SanPham/html/admin/data_oder.html"><li class="menu_item"><i class="fas fa-bag-shopping"></i>Quản lý đơn hàng</li></a>
+                            <a href="/SanPham/html/admin/data_user.html"><li class="menu_item"><i class="fas fa-address-card"></i>Quản lý người dùng</li></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sign_out">
+                <a href=""><i class="fas fa-right-from-bracket"></i></a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="user">
+                <div class="user_avatar">
+                    <i class="fa-solid fa-user fa-2x"></i>
+                </div>
+                <div>
+                    <div class="user_name">
+                        <b>Admin</b>
+                    </div>
+                    <div class="user_designation">
+                        <p>Chào mừng bạn trở lại</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="menu">
+                <a href="/SanPham/html/admin/admin.html"><li class="menu_item active"><i class="fas fa-house"></i>Trang chủ</li></a>
+                <a href="/SanPham/html/admin/data_product.html"><li class="menu_item"><i class="fas fa-tag"></i>Quản lý sản phẩm</li></a>
+                <a href="/SanPham/html/admin/data_oder.html"><li class="menu_item"><i class="fas fa-bag-shopping"></i>Quản lý đơn hàng</li></a>
+                <a href="/SanPham/html/admin/data_user.html"><li class="menu_item"><i class="fas fa-address-card"></i>Quản lý người dùng</li></a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="content">
+        <div class="row">
+            <div class="title col-12 box_shadow">
+                <b>Trang chủ</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="box_card box_shadow mb-3">
+                            <div class="card-header">TỔNG KHÁCH HÀNG</div>
+                            <div class="card-body">
+                                <h5 class="card-title">537 khách hàng</h5>
+                                <p class="card-text">Tổng số khách hàng được quản lý.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box_card box_shadow mb-3">
+                            <div class="card-header">TỔNG SẢN PHẨM</div>
+                            <div class="card-body">
+                                <h5 class="card-title">1850 sản phẩm</h5>
+                                <p class="card-text">Tổng số sản phẩm được quản lý.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box_card box_shadow mb-3">
+                            <div class="card-header">TỔNG ĐƠN HÀNG</div>
+                            <div class="card-body">
+                                <h5 class="card-title">247 đơn hàng</h5>
+                                <p class="card-text">Tổng số hóa đơn bán hàng trong tháng.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box_card box_shadow mb-3">
+                            <div class="card-header">SẮP HẾT HÀNG</div>
+                            <div class="card-body">
+                                <h5 class="card-title">0 sản phẩm</h5>
+                                <p class="card-text">Số sản phẩm cảnh báo hết cần nhập thêm.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box_card box_shadow">
+                            <canvas id="myChart" style="width:100%;max-width:600px;"></canvas>
+                            <script>
+                                var xValues = ["Bàn gỗ","Kệ sách","Rèm cửa","Ghế sofa","Phòng tắm","Tủ quần áo","Giường ngủ","Đèn trang trí"];
+                                var yValues = [32,17,25,4,62,15,9,87];
+                                var barColors = ["red","green","lightblue","orange","brown","yellow","darkblue","purple"];
+                                
+                                new Chart("myChart", {
+                                  type: "bar",
+                                  data: {
+                                    labels: xValues,
+                                    datasets: [{
+                                      backgroundColor: barColors,
+                                      data: yValues
+                                    }]
+                                  },
+                                  options: {
+                                    legend: {display: false},
+                                    scales: {
+                                      yAxes: [{
+                                        ticks: {
+                                          beginAtZero: true
+                                        }
+                                      }],
+                                    },
+                                    title: {
+                                      display: true,
+                                      text: "Sản phẩm bán được trong tháng 10"
+                                    }
+                                  }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <!-- ----------------------- Script ----------------------- -->
+    <script src="/SanPham/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="/SanPham/js/jquery.min.js"></script>
+    <script src="/SanPham/js/admin.js"></script>
+</body>
+</html>

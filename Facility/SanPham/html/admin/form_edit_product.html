@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/SanPham/fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="stylesheet" href="/SanPham/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="/SanPham/font_Roboto/Roboto-Bold.ttf">
+    <link rel="stylesheet" href="/SanPham/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/SanPham/css/admin.css">
+    <script src="/SanPham/js/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="/package/dist/sweetalert2.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <title>Quản lý sản phẩm</title>
+</head>
+<body >
+    <header>
+        <div class="top">
+            <div class="tab_menu">
+                <i class="fas fa-bars" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 250px;">
+                    <div class="sidebar">
+                        <div class="close_tab">
+                            <i class="fas fa-xmark" data-bs-dismiss="offcanvas"></i>
+                        </div>
+                        <div class="user">
+                            <div class="user_avatar">
+                                <i class="fa-solid fa-user fa-2x"></i>
+                            </div>
+                            <div>
+                                <div class="user_name">
+                                    <b>Admin</b>
+                                </div>
+                                <div class="user_designation">
+                                    <p>Chào mừng bạn trở lại</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="menu">
+                            <a href="/SanPham/html/admin/admin.html"><li class="menu_item"><i class="fas fa-house"></i>Trang chủ</li></a>
+                            <a href="/SanPham/html/admin/data_product.html"><li class="menu_item active"><i class="fas fa-tag"></i>Quản lý sản phẩm</li></a>
+                            <a href="/SanPham/html/admin/data_oder.html"><li class="menu_item"><i class="fas fa-bag-shopping"></i>Quản lý đơn hàng</li></a>
+                            <a href="/SanPham/html/admin/data_user.html"><li class="menu_item"><i class="fas fa-address-card"></i>Quản lý người dùng</li></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sign_out">
+                <a href=""><i class="fas fa-right-from-bracket"></i></a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="user">
+                <div class="user_avatar">
+                    <i class="fa-solid fa-user fa-2x"></i>
+                </div>
+                <div>
+                    <div class="user_name">
+                        <b>Admin</b>
+                    </div>
+                    <div class="user_designation">
+                        <p>Chào mừng bạn trở lại</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="menu">
+                <a href="/SanPham/html/admin/admin.html"><li class="menu_item"><i class="fas fa-house"></i>Trang chủ</li></a>
+                <a href="/SanPham/html/admin/data_product.html"><li class="menu_item active"><i class="fas fa-tag"></i>Quản lý sản phẩm</li></a>
+                <a href="/SanPham/html/admin/data_oder.html"><li class="menu_item"><i class="fas fa-bag-shopping"></i>Quản lý đơn hàng</li></a>
+                <a href="/SanPham/html/admin/data_user.html"><li class="menu_item"><i class="fas fa-address-card"></i>Quản lý người dùng</li></a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="content">
+        <div class="row">
+            <div class="title col-12 box_shadow">
+                <ul class="line_up">
+                    <li><a href="/SanPham/html/admin/data_product.html">Quản lý sản phẩm</a></li>
+                    <li><i class="fas fa-chevron-right"></i></li>
+                    <li>Chỉnh sửa sản phẩm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row main_frame box_card box_shadow">
+            <div class="sub_title">
+                <h5><b>Chỉnh sửa sản phẩm</b></h5>
+                <div></div>
+            </div>
+            <div class="edit_product">
+                <div class="form_edit">
+                    <div class="row">
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Mã sản phẩm</label>
+                            <input type="text" class="form-control" value="ban1">
+                        </div>
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Tên sản phẩm</label>
+                            <input type="text" class="form-control" value="Bàn cafe tròn gỗ đẹp">
+                        </div>
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Số lượng</label>
+                            <input type="number" class="form-control" value="24">
+                        </div>
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Tình trạng</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Còn hàng</option>
+                                <option value="1">Còn hàng</option>
+                                <option value="2">Hết hàng</option>
+                                <option value="3">Hàng sắp về</option>
+                            </select>
+                        </div>
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Danh mục</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Bàn gỗ</option>
+                                <option value="1">Bàn gỗ</option>
+                                <option value="2">Kệ sách</option>
+                                <option value="3">Rèm cửa</option>
+                                <option value="4">Ghế sofa</option>
+                                <option value="5">Phòng tắm</option>
+                                <option value="6">Tủ quần áo</option>
+                                <option value="7">Giường ngủ</option>
+                                <option value="8">Đèn trang trí</option>
+                            </select>
+                        </div>
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Nhà cung cấp</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>First Impression</option>
+                                <option value="1">Kenny Furniture</option>
+                                <option value="2">First Impression</option>
+                                <option value="3">Big One</option>
+                                <option value="4">Furniland</option>
+                                <option value="5">My home</option>
+                                <option value="6">Đang cập nhật</option>
+                            </select>
+                        </div>
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Giá bán</label>
+                            <input type="number" class="form-control" value="4500000">
+                        </div>
+                        <div class="form_group col-12 col-sm-6 col-lg-3">
+                            <label>Ảnh sản phẩm</label>
+                            <button class="hinh form-control" type="image">Thêm ảnh</button>
+                            <input style="display: none" type='file' id="files" name="image" multiple="multiple"/>
+                            <span id="previewImg"></span>
+                            <span id="previewImg"><img class="thumb" src="/SanPham/img/category/Ban/1.png" title=".png"><i class="fa fa-times time" onload="join('')"></i></span>
+                        </div>
+                        <div class="form_group col-12">
+                            <label>Mô tả sản phẩm</label>
+                            <textarea class="form-control" aria-label="With textarea" rows="10">
+                                Chất liêu: Sản xuất từ Gỗ MDF sơn Bệt 2k
+                                Kích thước: 800x800x350mm(Quý khách có thể đặt kích thước khác để phù hợp với phòng nhà mình)
+                                Màu: nâu
+                                Chất lượng: Gỗ công nghiệp MDF  nhập khẩu nguyên tấm từ Malaysia, vật liệu chất lượng cao.
+                                Với 100% nhựa nguyên chất, đảm bảo không độc hại, không mối mọt, ẩm ướt..v..v
+                                Ghế cafe TF 018 Với thiết kế đơn giản nhưng sang trọng, được tối ưu các chi tiết góc canh, để tạo cho bạn có cảm giác ngồi thoải mái nhất có thể.
+                                Ghế được làm bằng hộp thép tròn phi 19 , 21..v..v  độ dày 1mm, thép mạ kém, hoặc thép sơn tĩnh điện, tùy theo khách hàng lựa chọn,.
+                                Sợi dây nhựa giả mây cao cấp nhất Việt Nam.
+                                Không gian của bạn cần một loại ghế đơn giản nhưng sang trọng thì đó là ghế TF 018.
+                                Thiết kế của ghế TF 018, giúp bạn tiết kiệm không gian, ghế có thể chồng lên nhau từ 4 - 8 ghế  khi bạn cần thu dọn,  để lấy không gian
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="element_btn">
+                        <div class="edit_product" onclick="myFunction()">
+                            <a href="/SanPham/html/admin/data_product.html" class="edit_btn"><i class="fas fa-edit"></i>Sửa sản phẩm</a>
+                        </div>
+                        <script>
+                            function myFunction() {
+                                alert('Sửa thành công !!')
+                            }
+                            </script>
+                    </div>
+                </div>
+            </div>
+
+
+    <!-- ----------------------- Script ----------------------- -->
+    <script src="/SanPham/package/dist/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="/SanPham/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="/SanPham/js/jquery.min.js"></script>
+    <script src="/SanPham/js/admin.js"></script>
+    <script src="https://use.fontawesome.com/9b42ba68a2.js"></script>
+</body>
+</html>
