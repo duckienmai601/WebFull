@@ -13,6 +13,7 @@
     <script src="/SanPham/js/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/style.js"></script>
     <title>Bàn gỗ dài</title>
 </head>
 <body>
@@ -58,10 +59,23 @@
                     <a class="nav-link " href="/header/LienHe.html" >Liên Hệ</a>
                   </li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Tìm" aria-label="Search">
-                  <button class="btn btn-primary" type="submit"><span class="ti-search"></span></button>
-                </form>
+                <form class="d-flex display: block" >
+                    <input class="form-control me-2 search-input" type="text" placeholder="Tìm" aria-label="Search" id="myInput" onkeyup="myFunction()">
+                    <ul id="myUL" class="list-group searchInput mt-1">
+                      <li><a href="/SanPham/html/category/detail_item/Ban/ban2.html" class="list-group-item list-group-item-action">bàn GTY 091</a></li>
+                      <li><a href="/SanPham/html/category/detail_item/tu_quan_ao/tu2.html" class="list-group-item list-group-item-action">Tủ áo B1241K</a></li>
+                    
+                      <li><a href="/SanPham/html/category/detail_item/ke_sach/ke1.html" class="list-group-item list-group-item-action"  >Kệ sách gỗ 4 tầng 40</a></li>
+                      <li><a href="/SanPham/html/category/detail_item/rem_cua/rem1.html" class="list-group-item list-group-item-action" >Rèm Cửa 01</a></li>
+                    
+                      <li><a href="/SanPham/html/category/detail_item/phong_tam/tam1.html" class="list-group-item list-group-item-action">Thanh treo giấy vệ sinh</a></li>
+                      <li><a href="/SanPham/html/category/detail_item/sofa/sofa2.html" class="list-group-item list-group-item-action">Sofa Cafe</a></li>
+                      <li><a href="/SanPham/html/category/detail_item/giuong_ngu/giuong4.html" class="list-group-item list-group-item-action"  >Giường Bellasofa B1239</a></li>
+                      
+                    </ul>
+                    
+                    <button class="btn btn-primary search-btn" type="button" ><span class="ti-search"></span></button>
+                  </form>
                 <form class="holder">
                   <button type="button" class="add1 btn btn-primary">Đăng Nhập</button> 
                   <button type="button" class="add2 btn btn-primary">Đăng Ký</button>
