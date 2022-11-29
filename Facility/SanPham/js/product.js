@@ -8,8 +8,8 @@
 
 // ------------------------------- paging -------------------------------
 const  product = [
-    { id: 1,link: "/SanPham/html/category/detail_item/Ban/ban1.html", image: "/SanPham/img/category/Ban/cafe-tron-go-dep.png", title: "Bàn cafe tròn gỗ đẹp", price: "4.500.000"},
-    { id: 2,link: "/SanPham/html/category/detail_item/Ban/ban2.html", image: "/SanPham/img/category/Ban/GTY-091.png", title: "Bàn GTY 091", price: "3.500.000"},
+    { id: 1,class: 1000000-5000000,link: "/SanPham/html/category/detail_item/Ban/ban1.html", image: "/SanPham/img/category/Ban/cafe-tron-go-dep.png", title: "Bàn cafe tròn gỗ đẹp", price: "4.500.000"},
+    { id: 2,class:3,link: "/SanPham/html/category/detail_item/Ban/ban2.html", image: "/SanPham/img/category/Ban/GTY-091.png", title: "Bàn GTY 091", price: "3.500.000"},
     { id: 3,link: "/SanPham/html/category/detail_item/Ban/ban3.html", image: "/SanPham/img/category/Ban/tron-kinh.png", title: "Bàn tròn kính", price: "23.000.000"},
     { id: 4,link: "/SanPham/html/category/detail_item/Ban/ban4.html", image: "/SanPham/img/category/Ban/go-dai.png", title: "Bàn gỗ dài", price: "1.890.000"},
     { id: 5,link: "/SanPham/html/category/detail_item/den_trang_tri/den1.html", image: "/SanPham/img/category/DenTrangTri/Netviet-NV-8825.png", title: "Đèn trang trí vách cao cấp NETVIET NV 8825", price: "780.000"},
@@ -167,3 +167,52 @@ pagePrev.addEventListener('click', () => {
 //     document.getElementById('product_ban').innerHTML = html;
 // }
 // renderProduct_Ban();
+
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("lazyload col-xs-12 col-sm-6 col-md-4 col-lg-4");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("form-check-input");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}

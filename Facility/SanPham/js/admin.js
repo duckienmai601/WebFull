@@ -5,20 +5,164 @@ jQuery(function () {
             text: "Bạn có chắc chắn là muốn xóa sản phẩm này?",
             buttons: ["Hủy bỏ", "Đồng ý"],
         })
-            .then((willDelete) => {
-                if (willDelete) {
-                    swal("Đã xóa thành công!", {
-                        
-                    });
-                }
-            });
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("Đã xóa thành công!", {
+                    
+                });
+            }
+        });
+    });
+});
+
+jQuery(function () {
+    jQuery(".lock1").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .abc').addClass('active_ban')
+                swal("Đã cấm thành công!", {
+                    
+                });
+            }
+            
+        });
+    });
+});
+
+jQuery(function () {
+    jQuery(".lock2").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .xyz').addClass('active_ban')
+                swal("Đã cấm thành công!", {
+                    
+                });
+            }
+            
+        });
+    });
+});
+
+jQuery(function () {
+    jQuery(".lock3").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .qwe').addClass('active_ban')
+                swal("Đã cấm thành công!", {
+                    
+                });
+            }
+            
+        });
+    });
+});
+
+jQuery(function () {
+    jQuery(".lock4").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .xyz').addClass('active_ban')
+                swal("Đã cấm thành công!", {
+                    
+                });
+            }
+            
+        });
     });
 });
 
 
+jQuery(function () {
+    jQuery(".unlock1").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn gỡ cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .abc').removeClass('active_ban')
+                swal("Đã gỡ thành công!", {
+                    
+                });
+            }
+        });
+    });
+});
 
+jQuery(function () {
+    jQuery(".unlock2").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn gỡ cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .xyz').removeClass('active_ban')
+                swal("Đã gỡ thành công!", {
+                    
+                });
+            }
+        });
+    });
+});
 
+jQuery(function () {
+    jQuery(".unlock3").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn gỡ cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .qwe').removeClass('active_ban')
+                swal("Đã gỡ thành công!", {
+                    
+                });
+            }
+        });
+    });
+});
 
+jQuery(function () {
+    jQuery(".unlock4").click(function () {
+        swal({
+            title: "Cảnh báo",
+            text: "Bạn có chắc chắn là muốn gỡ cấm tài khoản này?",
+            buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $('tr .qwe').removeClass('active_ban')
+                swal("Đã gỡ thành công!", {
+                    
+                });
+            }
+        });
+    });
+});
 
 // ------------------------------ Add image ------------------------------
 $(document).ready(function(){

@@ -233,25 +233,29 @@
                                     <ul class="dropdown-menu">
                                         <li>
                                             <h6>Giá tiền</h6>
-                                            <div class="form">
+                                            <div class="form" id="myBtnContainer">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <input class="form-check-input cat-all active" type="checkbox" value="" id="flexCheckDefault" onclick="filterSelection('all')">
+                                                    <label class="form-check-label" for="flexCheckDefault">Tất Cả</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input cat-1" type="checkbox" value="" id="flexCheckDefault" onclick="filterSelection('0-200000')">
                                                     <label class="form-check-label" for="flexCheckDefault">0 - 200.000 <u>đ</u></label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <input class="form-check-input cat-2" type="checkbox" value="" id="flexCheckDefault" onclick="filterSelection('200000-1000000')" >
                                                     <label class="form-check-label" for="flexCheckDefault">200.000 - 1.000.000 <u>đ</u></label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <input class="form-check-input cat-3" type="checkbox" value="" id="flexCheckDefault" onclick="filterSelection('1000000-5000000')">
                                                     <label class="form-check-label" for="flexCheckDefault">1.000.000 - 5.000.000 <u>đ</u></label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <input class="form-check-input cat-4" type="checkbox" value="" id="flexCheckDefault" onclick="filterSelection('5000000-10000000')">
                                                     <label class="form-check-label" for="flexCheckDefault">5.000.000 - 10.000.000 <u>đ</u></label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <input class="form-check-input cat-5" type="checkbox" value="" id="flexCheckDefault" onclick="filterSelection('>10000000')">
                                                     <label class="form-check-label" for="flexCheckDefault">> 10.000.000 <u>đ</u></label>
                                                 </div>
                                             </div>
@@ -340,6 +344,7 @@
             </div>
         </div>
         <script src="/SanPham/js/product.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </section>
 
     <footer class="footer">

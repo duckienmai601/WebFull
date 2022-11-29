@@ -25,7 +25,7 @@
                         </div>
                         <div class="user">
                             <div class="user_avatar">
-                                <i class="fa-solid fa-user fa-2x"></i>
+                                <i class="fas fa-user fa-2x"></i>
                             </div>
                             <div>
                                 <div class="user_name">
@@ -53,7 +53,7 @@
         <div class="sidebar">
             <div class="user">
                 <div class="user_avatar">
-                    <i class="fa-solid fa-user fa-2x"></i>
+                    <i class="fas fa-user fa-2x"></i>
                 </div>
                 <div>
                     <div class="user_name">
@@ -95,43 +95,47 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Triệu Thanh Phú</td>
-                            <td>191 Bà Triệu, Phường Lê Đại Hành</td>
-                            <td>912-336-9598</td>
-                            <td>PetSuppliesCT@gmail.com</td>
-                            <td>poseydo5913</td>
+                            <td class="abc">Triệu Thanh Phú</td>
+                            <td class="abc">191 Bà Triệu, Phường Lê Đại Hành</td>
+                            <td class="abc">912-336-9598</td>
+                            <td class="abc">PetSuppliesCT@gmail.com</td>
+                            <td class="abc">poseydo5913</td>
                             <td>
-                                <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fa-solid fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm ban lock1" type="button"><i class="fas fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm unban unlock1" type="button"><i class="far fa-circle"></i></button>
                             </td>
                         </tr>
                         <tr>
-                            <td>Quán Thiếu Anh</td>
-                            <td>6, Hòa Khánh, Phường Hòa Khánh</td>
-                            <td>717-437-8833</td>
-                            <td>FrenzyFlorists@gmail.com</td>
-                            <td>divagra3915</td>
+                            <td class="xyz">Quán Thiếu Anh</td>
+                            <td class="xyz">6, Hòa Khánh, Phường Hòa Khánh</td>
+                            <td class="xyz">717-437-8833</td>
+                            <td class="xyz">FrenzyFlorists@gmail.com</td>
+                            <td class="xyz">divagra3915</td>
                             <td>
-                                <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fa-solid fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm ban lock2" type="button"><i class="fas fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm unban unlock2" type="button"><i class="far fa-circle"></i></button>
                             </td>
                         </tr>
                         <tr>
-                            <td>Vưu Hữu Khôi</td>
-                            <td>37 Đoàn Kết, Phường Tân Sơn Nhĩ</td>
-                            <td>703-472-4602</td>
-                            <td>iGotItComputers@gmail.com</td>
-                            <td>perebark226</td>
+                            <td class="qwe">Vưu Hữu Khôi</td>
+                            <td class="qwe">37 Đoàn Kết, Phường Tân Sơn Nhĩ</td>
+                            <td class="qwe">703-472-4602</td>
+                            <td class="qwe">iGotItComputers@gmail.com</td>
+                            <td class="qwe">perebark226</td>
                             <td>
-                                <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fa-solid fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm ban lock3" type="button"><i class="fas fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm unban unlock3" type="button"><i class="far fa-circle"></i></button>
                             </td>
                         </tr>
                         <tr>
-                            <td>Bạc Xuân Hiếu</td>
-                            <td>27/785, Đường Trương Định</td>
-                            <td>573-355-7157</td>
-                            <td>WackyWillie@gmail.com</td>
-                            <td>Mail33@998</td>
+                            <td class="zxc">Bạc Xuân Hiếu</td>
+                            <td class="zxc">27/785, Đường Trương Định</td>
+                            <td class="zxc">573-355-7157</td>
+                            <td class="zxc">WackyWillie@gmail.com</td>
+                            <td class="zxc">Mail33@998</td>
                             <td>
-                                <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fa-solid fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm ban lock4" type="button"><i class="fas fa-ban"></i></button>
+                                <button class="btn btn-primary btn-sm unban unlock4" type="button"><i class="far fa-circle"></i></button>
                             </td>
                         </tr>
                     </tbody>
@@ -156,28 +160,6 @@
     <script src="/SanPham/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
     <script src="/SanPham/js/jquery.min.js"></script>
     <script src="/SanPham/js/product_order.js"></script>
-
-
-
-
-    
-    <script>
-        jQuery(function () {
-        jQuery(".trash").click(function () {
-            swal({
-                title: "Cảnh báo",
-                text: "Bạn có chắc chắn là muốn cấm tài khoản này?",
-                buttons: ["Hủy bỏ", "Đồng ý"],
-            })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        swal("Đã cấm thành công!", {
-                            
-                        });
-                    }
-                });
-        });
-    });
-    </script>
+    <script src="/SanPham/js/admin.js"></script>
 </body>
 </html>

@@ -38,7 +38,9 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-
+.main_frame {
+    padding: 20px 0 0 0;
+}
 /*---------- header ----------*/
 /* .sidebar {
     display: none;
@@ -224,21 +226,21 @@ body {
 .table tr:hover {
     background-color: #e2e3e560;
 }
-.trash {
+.trash, .ban {
     border: none;
     color: #de0400;
     background-color: #f7c3c2;
 }
-.trash:hover {
+.trash:hover, .ban:hover {
     color: #f7c3c2;
     background-color: #de0400;
 }
-.edit {
+.edit, .unban {
     border: none;
     color: #fa9a14;
     background-color: #fbe2c5;
 }
-.edit:hover {
+.edit:hover, .unban:hover {
     color: #fbe2c5;
     background-color: #fa9a14;
 }
@@ -326,10 +328,6 @@ body {
     color: #c6edfd;
 }
 
-
-
-
-
 @media (max-width: 768px) {
     header > .sidebar {
         display: none;
@@ -340,4 +338,44 @@ body {
     .form_edit {
         margin-left: 0;
     }
+}
+
+.finish {
+    color: #02790c;
+    background-color: #bfefc4;
+}
+.wait {
+    color: #0f2094;
+    background-color: #b6bef5;
+}
+.delivery {
+    color: #8b9400;
+    background-color: #f2f98a;
+}
+.cancelled {
+    color: #a90312;
+    background-color: #f9c9cd;
+}
+.finish, .wait, .delivery, .cancelled {
+    font-family: Roboto-Bold;
+}
+/*---------- revenue statistics ----------*/
+
+.top_title_table {
+    font-family: Roboto-Bold;
+}
+.top_title_table h4 {
+    margin: 0 5px;
+}
+.top_title_table hr {
+    background-color: #ffd43b;
+    height: 2px;
+    border: none;
+    opacity: 1;
+    margin: 10px 5px;
+}
+
+/*---------- user ----------*/
+.active_ban {
+    text-decoration: line-through;
 }
