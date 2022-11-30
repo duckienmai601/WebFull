@@ -81,7 +81,7 @@ jQuery(function () {
         })
         .then((willDelete) => {
             if (willDelete) {
-                $('tr .xyz').addClass('active_ban')
+                $('tr .zxc').addClass('active_ban')
                 swal("Đã cấm thành công!", {
                     
                 });
@@ -155,7 +155,7 @@ jQuery(function () {
         })
         .then((willDelete) => {
             if (willDelete) {
-                $('tr .qwe').removeClass('active_ban')
+                $('tr .zxc').removeClass('active_ban')
                 swal("Đã gỡ thành công!", {
                     
                 });
