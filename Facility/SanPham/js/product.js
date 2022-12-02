@@ -381,7 +381,7 @@ let perPage = 12,
 function getCurrentPage() {
   start = (currentPage - 1) * perPage;
   end = currentPage * perPage;
-}
+} 
 
 function renderProduct() {
   html = '';
@@ -508,7 +508,7 @@ function listProduct(category_arr=[], price_arr=[]) {
       `
   }
 }
-listProduct()
+// listProduct()
 // const pageNext = document.querySelector('.page_btn_next');
 // const pagePrev = document.querySelector('.page_btn_prev');
 // const totalPages = Math.ceil(product.length / perPage);
@@ -606,7 +606,8 @@ function selectProduct(){
   var arr1 = document.getElementsByClassName("category")
   var category_arr = []
   for(i=0; i<arr1.length; i++) {
-      if(arr1[i].checked) category_arr.push(arr1[i].value)
+      if(arr1[i].checked) category_arr.push(arr1[i].value);
+
   }
   var arr2 = document.getElementsByClassName("price")
   var price_arr = []
@@ -614,4 +615,19 @@ function selectProduct(){
   if(arr2[i].checked == true) price_arr.push(arr2[i].value)
   }
   listProduct(category_arr, price_arr)
+  
 }
+
+function sortProduct() {
+    var valueSelect = document.getElementById("arrange").value
+    product.sort((a, b)=> {
+        if(valueSelect === "2") {
+            return a.price - b.price
+        }else if(valueSelect === "1") {
+            return b.price - a.price
+        }else{
+            return a.id - b.id
+        }
+    })  
+    renderProduct()  
+  }

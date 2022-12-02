@@ -132,7 +132,7 @@
                         <div class="category_left_content">
                             <ul>
                                 <li class="category_left_menu"><i class="fas fa-chevron-right"></i><a href="/Index.html">Trang chủ</a></li>
-                                <li class="category_left_menu"><i class="fas fa-chevron-right"></i><a href="">Giới thiệu</a></li>
+                                <li class="category_left_menu"><i class="fas fa-chevron-right"></i><a href="/header/GioiThieu.html">Giới thiệu</a></li>
                                 <li class="category_left_menu"><i class="fas fa-chevron-right"></i><a href="#">Sản phẩm<i class="fas fa-chevron-down"></i></a>
                                     <ul>
                                         <li><a href="/SanPham/html/category/product.html">Tất cả Sản Phẩm</a></li>
@@ -298,11 +298,11 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="category_right_top col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                    <select name="" id="">
-                                        <option value="">Sắp xếp</option>
-                                        <option value="">Giá cao đến thấp</option>
-                                        <option value="">Giá thấp đến cao</option>
+                                <div onchange="sortProduct()" class="category_right_top col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <select id="arrange">
+                                        <option value="default">Sắp xếp</option>
+                                        <option value="1">Giá cao đến thấp</option>
+                                        <option value="2">Giá thấp đến cao</option>
                                     </select>
                                 </div>
                             </div>
