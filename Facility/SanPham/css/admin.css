@@ -377,5 +377,5 @@ body {
 
 /*---------- user ----------*/
 .active_ban {
-    text-decoration: line-through;
+    color : red;
 }
